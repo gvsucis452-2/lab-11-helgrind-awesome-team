@@ -9,7 +9,8 @@ Helgrind does not find any race conditions, as seen below:
 ![alt text](image.png)
 
 ### Question 3
-
+Helgrind still reports a data race because the other place where `balance` is modified is still unprotected.
+![alt text](image-1.png)
 
 ### Question 4
 
