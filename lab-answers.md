@@ -5,7 +5,8 @@
 * The Helgrind output also provides additional information about which threads were created, where the possible data race occurred, the memory location and shared variable involved, and whether any locks were being held at the time.
 
 ### Question 2
-
+Helgrind does not find any race conditions, as seen below:
+![alt text](image.png)
 
 ### Question 3
 
