@@ -13,13 +13,17 @@ Helgrind still reports a data race because the other place where `balance` is mo
 ![alt text](image-1.png)
 
 ### Question 4
-
+Helgrind does not find any race conditions, as seen below:
+![alt text](image-2.png)
 
 ### Question 5
+* A deadlock is when locks are formatted in a way that does not let either thread access resources, this causes both threads to stop execution.
 
+* This causes a deadlock because one thread locks `m1` then waits for `m2` while another locks `m2` then waits for `m1`, so both threads are stuck waiting on each other.
 
 ### Question 6
-
+Helgrind reports inaccurate accquistion of locks (deadlock), as seen below:
+![alt text](image-3.png)
 
 ### Question 7
 
