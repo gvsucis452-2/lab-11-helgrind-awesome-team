@@ -3,9 +3,12 @@
 #include "common_threads.h"
 
 int balance = 0;
+pthread_mutex_t m1 = PTHREAD_MUTEX_INITIALIZER;
 
 void* worker(void* arg) {
-    //balance++; // unprotected access 
+    Pthread_mutex_lock(&m1);
+    balance++; // unprotected access 
+    Pthread_mutex_unlock(&m1);
     return NULL;
 }
 
