@@ -49,7 +49,7 @@ Helgrind reports a data race on `done`, as seen below:
 ![alt text](<Screenshot 2026-04-06 at 9.41.31 AM.png>)
 
 ### Question 10
-`main-signal-cv.c` is preferred because it uses a mutex and condition variable instead of busy-waiting. The waiting thread sleeps until it is signaled, so it does not waste CPU time, and access to the shared state is properly synchronized. Because of that, it is better for both correctness/performance.
+`main-signal-cv.c` is preferred because it uses a mutex and condition variable instead of busy-waiting. The waiting thread sleeps until it is signaled, so it does not waste CPU time, and access to the shared state is properly synchronized. Because of that, its better for both correctness/performance.
 
 ### Question 11
 Helgrind does not report any errors, as seen below:
