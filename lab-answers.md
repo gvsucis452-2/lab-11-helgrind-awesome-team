@@ -48,6 +48,8 @@ This code is inefficient because the parent thread busy-waits in `while (done ==
 Helgrind reports a data race on `done`, as seen below:
 ![alt text](<Screenshot 2026-04-06 at 9.41.31 AM.png>)
 
+**zk** What sequence of events could lead to an incorrect answer?
+
 ### Question 10
 `main-signal-cv.c` is preferred because it uses a mutex and condition variable instead of busy-waiting. The waiting thread sleeps until it is signaled, so it does not waste CPU time, and access to the shared state is properly synchronized. Because of that, its better for both correctness/performance.
 
